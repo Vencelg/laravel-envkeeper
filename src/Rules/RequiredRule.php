@@ -4,10 +4,12 @@ declare(strict_types=1);
 
 namespace Vencelg\EnvKeeper\Rules;
 
-use Vencelg\EnvKeeper\Rules\Base\BaseRule;
+use Vencelg\EnvKeeper\Rules\Base\Rule;
 
-class RequiredRule extends BaseRule
+class RequiredRule extends Rule
 {
+    public const KEY = 'required';
+
     /**
      * @throws \Exception
      */
@@ -19,7 +21,7 @@ class RequiredRule extends BaseRule
 
     public static function key(): string
     {
-        return 'required';
+        return self::KEY;
     }
 
     /**

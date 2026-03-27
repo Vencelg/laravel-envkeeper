@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Vencelg\EnvKeeper\Rules\Base;
 
-abstract class BaseRule
+abstract class Rule
 {
     public function __construct(protected mixed $value) {}
 
