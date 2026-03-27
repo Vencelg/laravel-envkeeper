@@ -1,0 +1,29 @@
+{
+    "name": "vencelg/laravel-envkeeper",
+    "description": "A Laravel package that validates your .env files against a defined schema, with per-environment rules",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Vencelg\\EnvKeeper\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Václav Gazda"
+        }
+    ],
+    "require": {
+        "illuminate/support": "^13.2",
+        "illuminate/console": "^13.2"
+    },
+    "extra": {
+      "laravel": {
+        "providers": [
+          "Vencelg\\EnvKeeper\\EnvKeeperServiceProvider"
+        ]
+      }
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.94"
+    }
+}

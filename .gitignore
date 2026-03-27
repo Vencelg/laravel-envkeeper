@@ -1,0 +1,19 @@
+# Composer dependencies
+/vendor/
+
+# Local notes
+/ideas.md
+
+# IDE/editor
+/.idea/
+/.vscode/
+*.swp
+*.swo
+
+# PHP/Laravel tooling cache
+/.php-cs-fixer.cache
+/.phpunit.result.cache
+
+# OS files
+.DS_Store
+Thumbs.db
