@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Vencelg\EnvKeeper\Rules;
 
+use Exception;
 use Vencelg\EnvKeeper\Rules\Base\Rule;
 
 class RequiredRule extends Rule
@@ -11,7 +12,7 @@ class RequiredRule extends Rule
     public const KEY = 'required';
 
     /**
-     * @throws \Exception
+     * @throws Exception
      */
     public function __construct(mixed $value)
     {
@@ -25,12 +26,12 @@ class RequiredRule extends Rule
     }
 
     /**
-     * @throws \Exception
+     * @throws Exception
      */
     public function check(): bool
     {
         if (!is_bool($this->value)) {
-            throw new \Exception('Invalid value for rule ' . static::key() . '. Expected boolean, got ' . gettype($this->value));
+            throw new Exception('Invalid value for rule ' . static::key() . '. Expected boolean, got ' . gettype($this->value));
         }
 
         return true;
